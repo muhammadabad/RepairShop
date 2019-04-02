@@ -19,9 +19,9 @@
 		$device = $_POST['ud_device'];
 		$brand = $_POST['ud_brand'];
 		$model = $_POST['ud_model'];
-		$os = $_POST['ud_os'];
+		
 		$work_done = $_POST['ud_work_done'];
-		$quanity = $_POST['ud_quantity'];
+		
 		$amount = $_POST['ud_amount'];
 		$profit = $_POST['ud_profit'];
 		$date = $_POST['ud_date'];
@@ -30,8 +30,7 @@
 		$pay_status = $_POST['ud_pay_status'];
 		$comment = $_POST['ud_comment'];
 		
-		$sql = "UPDATE repairs SET description = '$description',  devicetype = '$device', brand = '$brand', model = '$model', os = '$os', status = '$status', workdone= '$work_done',
-		quantity = '$quanity', amount = '$amount', profit = '$profit', date = '$date', paymentreceiveddate = '$pay_date', paymentstatus = '$pay_status', comment = '$comment' WHERE rep_id = $id" ;
+		$sql = "UPDATE repairs SET description = '$description',  devicetype = '$device', brand = '$brand', model = '$model', status = '$status', workdone= '$work_done', amount = '$amount', profit = '$profit', date = '$date', paymentreceiveddate = '$pay_date', paymentstatus = '$pay_status', comment = '$comment' WHERE rep_id = $id" ;
 		
 		$res = mysqli_query($conn, $sql);	
 		if ( !$res ) {
@@ -73,7 +72,7 @@
 					$brand = $row['Brand'];
 					$model = $row['Model'];
 					$work_done = $row['WorkDone'];
-			        $quantity = $row['Quantity'];
+			        
 			        $amount = $row['Amount'];
 			        $profit = $row['Profit'];
 		        	$date = $row['Date'];

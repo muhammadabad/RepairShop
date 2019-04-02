@@ -36,7 +36,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer/ vendor..">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -104,7 +104,7 @@
 							<span>Repairs</span>
 						</a>
 					</li>
-					<li>
+					<!--<li>
 						<a href="#">
 							<span class="icon">
 								<i aria-hidden="true" class="icon-sigma"></i>
@@ -119,7 +119,7 @@
 							</span>
 							<span>Inventory</span>
 						</a>
-					</li>
+					</li>-->
 					<li>
 						<a href="account.php">
 							<span class="icon">

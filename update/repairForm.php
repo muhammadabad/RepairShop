@@ -30,7 +30,7 @@
 			$brand = $row['Brand'];
 			$model = $row['Model'];
 			$work_done = $row['WorkDone'];
-			$quantity = $row['Quantity'];
+			
 			$amount = $row['Amount'];
 			$profit = $row['Profit'];
 			$date = $row['Date'];

@@ -23,14 +23,14 @@ $stylesheet = file_get_contents('style.css');
 		$device = $_POST['device'];
 		$brand = $_POST['brand'];
 		$model = $_POST['model'];
-		$os = $_POST['os'];
+		
 		$work_done= $_POST['work_done'];
-		$quantity= $_POST['quantity'];
+		
 		$amount= $_POST['amount'];
 		$profit= $_POST['profit'];
 		$date= $_POST['date'];
 		$status= $_POST['status'];
-		$pay_date= $_POST['pay_date'];
+		
 		$comment= $_POST['comment'];
 		
 		
@@ -49,14 +49,14 @@ $stylesheet = file_get_contents('style.css');
 		$device = stripslashes($device);
 		$brand = stripslashes($brand);
 		$model = stripslashes($model);
-		$os = stripslashes($os);
+		
 		$work_done= stripslashes($work_done);
-		$quantity= stripslashes($quantity);
+		
 		$amount= stripslashes($amount);
 		$profit= stripslashes($profit);
 		$date= stripslashes($date);
 		$status= stripslashes($status);
-		$pay_date= stripslashes($pay_date);
+		
 		$comment= stripslashes($comment);
 		
 		$cust_id = mysqli_real_escape_string($conn, $cust_id);
@@ -65,14 +65,14 @@ $stylesheet = file_get_contents('style.css');
 		$device = mysqli_real_escape_string($conn, $device);
 		$brand = mysqli_real_escape_string($conn, $brand);
 		$model = mysqli_real_escape_string($conn, $model);
-		$os = mysqli_real_escape_string($conn, $os);
+		
 		$work_done= mysqli_real_escape_string($conn, $work_done);
-		$quantity= mysqli_real_escape_string($conn, $quantity);
+		
 		$amount= mysqli_real_escape_string($conn, $amount);
 		$profit= mysqli_real_escape_string($conn, $profit);
 		$date= mysqli_real_escape_string($conn, $date);
 		$status= mysqli_real_escape_string($conn, $status);
-		$pay_date= mysqli_real_escape_string($conn, $pay_date);
+		
 		$comment= mysqli_real_escape_string($conn, $comment);
 		
 		
@@ -85,8 +85,8 @@ $stylesheet = file_get_contents('style.css');
 			}
 			
 			
-			$sql = "INSERT INTO repairs (cust_id, staff_id, description, devicetype, brand, model, os, workdone, quantity, amount, profit, comment, status, date, paymentreceiveddate)
-			VALUES ('$cust_id', '$staff_id', '$description', '$device', '$brand', '$model', '$os', '$work_done', '$quantity', '$amount', '$profit', '$comment', '$status', '$date', '$pay_date')";
+			$sql = "INSERT INTO repairs (cust_id, staff_id, description, devicetype, brand, model, workdone, amount, profit, comment, status, date)
+			VALUES ('$cust_id', '$staff_id', '$description', '$device', '$brand', '$model', '$work_done', '$amount', '$profit', '$comment', '$status', '$date')";
 			$res = mysqli_query($conn, $sql);
 			
 			if (!$res) {

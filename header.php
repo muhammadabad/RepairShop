@@ -35,7 +35,7 @@
 					<div class="search_form" style="display: -webkit-inline-box;">
                     <img src="images/sofyrus.jpg">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer/ vendor..">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->

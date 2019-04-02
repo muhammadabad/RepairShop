@@ -39,19 +39,11 @@
 						</select>
 						Brand: <input type="text" name="ud_brand" value="<?php echo $brand; ?>" required>
 						Model: <input type="text" name="ud_model" value="<?php echo $model; ?>" required>
-						Operating System: <select id="" name="ud_os" class="" required="">
-							<option value="Windows 7" <?php if($row['OS'] == 'Windows 7') { ?> selected="selected"<?php } ?>>Windows 7</option> 
-							<option value="Windows 8" <?php if($row['OS'] == 'Windows 8') { ?> selected="selected"<?php } ?>>Windows 8</option>
-							<option value="Windows Vista" <?php if($row['OS'] == 'Windows Vista') { ?> selected="selected"<?php } ?>>Windows Vista</option>
-							<option value="Windows Older" <?php if($row['OS'] == 'Windows Older') { ?> selected="selected"<?php } ?>>Windows Older</option> 
-							<option value="MacOS" <?php if($row['OS'] == 'MacOS') { ?> selected="selected"<?php } ?>>MacOS</option>
-							<option value="Linux" <?php if($row['OS'] == 'Linux') { ?> selected="selected"<?php } ?>>Linux</option> 
-							<option value="Other" <?php if($row['OS'] == 'Other') { ?> selected="selected"<?php } ?>>Other</option> 
-						</select>
+						
 						Work Done: <input type="text" name="ud_work_done" value="<?php echo $work_done;?>" required>
-						Quantity: <input type="Number" name="ud_quantity" value="<?php echo $quantity;?>" required>
-						Amount: <input type="Number" name="ud_amount" value="<?php echo $amount;?>" required>
-						Profit: <input type="Number" name="ud_profit" value="<?php echo $profit;?>" required>
+						
+						Amount: <input type="Number" name="ud_amount" value="<?php echo $amount;?>">
+						Profit: <input type="Number" name="ud_profit" value="<?php echo $profit;?>">
 						Date: <input type="date" name="ud_date" value="<?php echo $date;?>" required><br>
 						Status: <select id="" name="ud_status" class="" required="">
 							<option value="New" <?php if($row['Status'] == 'New') { ?> selected="selected"<?php } ?>>New</option> 
@@ -63,14 +55,14 @@
 							<option value="Invoiced" <?php if($row['Status'] == 'Invoiced') { ?> selected="selected"<?php } ?>>Invoiced</option> 
 							<option value="Estimate Assigned" <?php if($row['Status'] == 'Estimate Assigned') { ?> selected="selected"<?php } ?>>Estimate Assigned</option> 
 						</select>
-						Payment Received Date: <input type="date" name="ud_pay_date" value="<?php echo $pay_date;?>"required><br>
+						Payment Received Date: <input type="date" name="ud_pay_date" value="<?php echo $pay_date;?>"><br>
 						PaymentStatus: <select id="" name="ud_pay_status" class="" required="">
 							<option value="Pending" <?php if($row['PaymentStatus'] == 'Pending') { ?> selected="selected"<?php } ?>>Pending</option> 
 							<option value="Partially Paid" <?php if($row['PaymentStatus'] == 'Partially Paid') { ?> selected="selected"<?php } ?>>Partially Paid</option>
 							<option value="Paid" <?php if($row['PaymentStatus'] == 'Paid') { ?> selected="selected"<?php } ?>>Paid</option>
 						</select>
-						Comment: <input type="text" name="ud_comment" value="<?php echo $comment;?>" required>
-						Description: <textarea rows="5" name="ud_description" required><?php echo $description; ?></textarea>
+						Comment: <input type="text" name="ud_comment" value="<?php echo $comment;?>">
+						Description: <textarea rows="5" name="ud_description"><?php echo $description; ?></textarea>
 						<input type="submit" name="submit" value="Update Repair Details">
 						
 					</form>

@@ -56,9 +56,9 @@
 										<th>DeviceType&nbsp;<a ng-click="sort_by('device');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Brand&nbsp;<a ng-click="sort_by('brand');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Model&nbsp;<a ng-click="sort_by('model');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>OS&nbsp;<a ng-click="sort_by('os');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										
 										<th>WorkDone&nbsp;<a ng-click="sort_by('work_done');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Quantity&nbsp;<a ng-click="sort_by('quantity');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										
 										<th>Amount&nbsp;<a ng-click="sort_by('amount');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Profit&nbsp;<a ng-click="sort_by('profit');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Date&nbsp;<a ng-click="sort_by('date');"><i class="glyphicon glyphicon-sort"></i></a></th>
@@ -78,9 +78,9 @@
 											<td>{{data.devicetype}}</td>
 											<td>{{data.brand}}</td>
 											<td>{{data.model}}</td>
-											<td>{{data.os}}</td>
+											
 											<td>{{data.workdone}}</td>
-											<td>{{data.quantity}}</td>
+											
 											<td>{{data.amount}}</td>
 											<td>{{data.profit}}</td>
 											<td>{{data.date}}</td>

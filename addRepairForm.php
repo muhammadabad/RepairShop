@@ -36,16 +36,16 @@
 						<?php echo enumDropdown("repairs", "DeviceType", "device"); ?>
 						<input type="text" name="brand" placeholder="Brand" required>
 						<input type="text" name="model" placeholder="Model" required>
-						<?php echo enumDropdown("repairs", "OS", "os"); ?>
+                        
 						<input type="text" name="work_done" placeholder="Work Done" required>
-						<input type="Number" name="quantity" placeholder="Quantity" required>
-						<input type="Number" name="amount" placeholder="Amount" required>
-						<input type="Number" name="profit" placeholder="Profit" required>
+						
+						<input type="Number" name="amount" placeholder="Amount">
+						<input type="Number" name="profit" placeholder="Profit">
 						Date: <input type="Date" name="date" required>
 						<?php echo enumDropdown("repairs", "Status", "status"); ?>
-						Payment Received Date: <input type="date" name="pay_date" required>
-						<input type="text" name="comment" Placeholder="Comment" required>
-						<textarea rows="5" name="description" placeholder="Description" required></textarea>
+						
+						<input type="text" name="comment" Placeholder="Comment">
+						<textarea rows="5" name="description" placeholder="Description"></textarea>
 						<input type="submit" name="submit" value="ADD NEW REPAIR">
 					</form>
 					
