@@ -8,6 +8,7 @@
 					<ul>
 						<li id="update" value="Update Repair">Update Repair</li>
 						<li id="add"><a href="addRepair.php">Add Repair</a></li>
+						<li id="invoice" value="Generate Invoice">Generate Invoice</li>
 					</ul>
 				</div>
 				<h3>Repairs</h3>
@@ -22,6 +23,16 @@
 						<p>Enter Repair ID number:</p> <br>
 						<input type="number" name="record" placeholder="Enter ID number e.g. 1" min="1" maxlength="10" required>
 						<input type="submit" name="go" value="Go to update >>">	
+						</form>
+					
+				</div>
+
+				<div class="full-widget" id="invoiceDiv" style="display:none;">
+					
+					<form class="form-4" method="post" action="generateInvoice.php">	
+						<p>Enter Repair Id for Generating Invoice:</p> <br>
+						<input type="number" name="invoice_id" placeholder="Enter ID number e.g. 1" min="1" maxlength="10" required>
+						<input type="submit" name="submit" value="Go for Invoice >>">	
 						</form>
 					
 				</div>
@@ -130,6 +141,15 @@
 			
 			$( "#update" ).click(function() {
 				$( "#searchDiv" ).toggle( "slow", function() {
+					// Animation complete.
+				});
+			});
+			function showInvoice() {
+				document.getElementById('invoiceDiv').style.display = "block";
+			}
+			
+			$( "#invoice" ).click(function() {
+				$( "#invoiceDiv" ).toggle( "slow", function() {
 					// Animation complete.
 				});
 			});
