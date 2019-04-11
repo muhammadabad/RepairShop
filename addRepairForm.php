@@ -23,7 +23,7 @@
 			<div class="floats">
 				<div class="full-widget">		
 					
-					<form class="form-4" action="addNewRepair.php" method="post">
+				<form class="form-4" action="addNewRepair.php" method="post">
 						<h1>Adding a new repair: </h1>
 						<span id="msg">
 							<?php 
@@ -32,20 +32,16 @@
 							?>
 						</span>
 						Customer ID: <input type="text" name="cust_id" placeholder="Customer ID is invalid" value="<?php echo $id; ?>" readonly>
+						Customer Name: <input type="text" name="name" placeholder="Customer Name" value="<?php echo $name; ?>" readonly>
 						<input type="hidden" name="staff_id" value="<?php echo $login_id; ?>" readonly>
 						<?php echo enumDropdown("repairs", "DeviceType", "device"); ?>
 						<input type="text" name="brand" placeholder="Brand" required>
 						<input type="text" name="model" placeholder="Model" required>
-                        
-						<input type="text" name="work_done" placeholder="Work Done" required>
-						
+						<input type="text" name="work_done" placeholder="Work Done" required>	
 						<input type="Number" name="amount" placeholder="Amount">
 						<input type="Number" name="profit" placeholder="Profit">
-						Date: <input type="Date" name="date" required>
 						<?php echo enumDropdown("repairs", "Status", "status"); ?>
-						
 						<input type="text" name="comment" Placeholder="Comment">
-						<textarea rows="5" name="description" placeholder="Description"></textarea>
 						<input type="submit" name="submit" value="ADD NEW REPAIR">
 					</form>
 					

@@ -1,7 +1,7 @@
 <?php
 	include('../includes/config.php');
 	$edit = '';
-	$query="SELECT DISTINCT c.cust_id, c.surname, c.forename, c.town, c.county, c.tel, c.type FROM customers c ORDER BY c.cust_id";
+	$query="SELECT DISTINCT c.cust_id, c.name, c.town, c.county, c.tel, c.type FROM customers c ORDER BY c.cust_id";
 	$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
 	
 	$arr = array();

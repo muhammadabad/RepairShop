@@ -29,10 +29,8 @@
 								echo $error;
 							?>
 						</span>
-						<input type="text" name="surname" placeholder="Surname" required>
-						
-						<input type="text" name="forename" placeholder="Forename" required>
-						
+						<input type="text" name="name" placeholder="Name" required>
+
 						<input type="text" name="town" placeholder="Town" required>
 						
 						<input type="text" name="county" placeholder="County" required>

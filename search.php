@@ -14,7 +14,7 @@
 					die("Connection failed: " . mysqli_connect_error());
 				}*/
 				
-				$query = "SELECT * FROM customers WHERE  cust_id LIKE '%" . $name . "%' OR forename LIKE '%" . $name . "%' OR surname LIKE '%" . $name  ."%' OR town LIKE '%" . $name . "%' OR county LIKE '%" . $name . "%' OR type LIKE '%" . $name . "%'";
+				$query = "SELECT * FROM customers WHERE  cust_id LIKE '%" . $name . "%' OR name LIKE '%" . $name . "%' OR town LIKE '%" . $name . "%' OR county LIKE '%" . $name . "%' OR type LIKE '%" . $name . "%'";
 				
 				$result= mysqli_query($conn, $query);
 				
@@ -28,15 +28,14 @@
 				//-create  while loop and loop through result set
 				while($row = mysqli_fetch_array($result)){
 					$ID = $row['cust_id'];
-					$firstname =$row['forename'];
-					$lastname=$row['surname'];
+					$name = $row['name'];
 					$town = $row['town'];
 					$county = $row['county'];
 					$tel = $row ['tel'];
 					$type = $row ['type'];
 					
 					//-display the result of the array
-				    $customer = $customer . "<ul>\n  <li>".$ID." ".$firstname . " " . $lastname .  " "   .$town . " "   .$county . " "   .$tel . "</li>\n\n\n\n\n</ul>";
+				    $customer = $customer . "<ul>\n  <li>".$ID." ".$name.  " "   .$town . " "   .$county . " "   .$tel . "</li>\n\n\n\n\n</ul>";
 				}
 				mysqli_close($conn);
 				

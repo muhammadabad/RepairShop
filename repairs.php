@@ -63,7 +63,7 @@
 								<table class="table table-striped table-bordered">
 									<thead>
 										<th>ID&nbsp;<a ng-click="sort_by('rep_id');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Cust_ID&nbsp;<a ng-click="sort_by('cust_id');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Name&nbsp;<a ng-click="sort_by('Name');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>DeviceType&nbsp;<a ng-click="sort_by('device');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Brand&nbsp;<a ng-click="sort_by('brand');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Model&nbsp;<a ng-click="sort_by('model');"><i class="glyphicon glyphicon-sort"></i></a></th>
@@ -72,20 +72,18 @@
 										
 										<th>Amount&nbsp;<a ng-click="sort_by('amount');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Profit&nbsp;<a ng-click="sort_by('profit');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Date&nbsp;<a ng-click="sort_by('date');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>PaymentReceivedDate&nbsp;<a ng-click="sort_by('pay_date');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>PaymentStatus&nbsp;<a ng-click="sort_by('pay_status');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>DateAdded&nbsp;<a ng-click="sort_by('repairdate');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>UpdateDate&nbsp;<a ng-click="sort_by('collectiondate');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Status&nbsp;<a ng-click="sort_by('status');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Comment&nbsp;<a ng-click="sort_by('comment');"><i class="glyphicon glyphicon-sort"></i></a></th>
-									    <th>Description&nbsp;<a ng-click="sort_by('description');"><i class="glyphicon glyphicon-sort"></i></a></th>
 
 									</thead>
 									<tbody>
 										<tr ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 											<td>{{data.rep_id}}</td>
-											<td>{{data.cust_id}}</td>
+											<td>{{data.cust_name}}</td>
 											<td>{{data.devicetype}}</td>
 											<td>{{data.brand}}</td>
 											<td>{{data.model}}</td>
@@ -94,14 +92,12 @@
 											
 											<td>{{data.amount}}</td>
 											<td>{{data.profit}}</td>
-											<td>{{data.date}}</td>
 											<td>{{data.paymentreceiveddate}}</td>
 											<td>{{data.paymentstatus}}</td>
 											<td>{{data.repairdate}}</td>
 											<td>{{data.collectiondate}}</td>
 											<td>{{data.status}}</td>
 											<td>{{data.comment}}</td>
-											<td>{{data.description}}</td>
 										</tr>
 									</tbody>
 								</table>

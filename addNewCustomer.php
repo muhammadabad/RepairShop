@@ -4,8 +4,7 @@
 	$error =  '';
 	if (isset($_POST['submit'])) {
 		// Define $username and $password
-		$surname = $_POST['surname'];
-		$forename = $_POST['forename'];
+		$name = $_POST['name'];
 		$town = $_POST['town'];
 		$county = $_POST['county'];
 		$tel = $_POST['telephone'];
@@ -21,15 +20,13 @@
 		}*/
 		
 		// To protect MySQL injection for Security purpose
-		$surname = stripslashes($surname );
-		$forename = stripslashes($forename);
+		$name = stripslashes($name);
 		$town = stripslashes($town);
 		$county = stripslashes($county);
 		$tel = stripslashes($tel);
 		$type = stripslashes($type);
 
-		$surname = mysqli_real_escape_string($conn, $surname );
-		$forename = mysqli_real_escape_string($conn, $forename);
+		$name = mysqli_real_escape_string($conn, $name);
 		$town = mysqli_real_escape_string($conn, $town);
 		$county = mysqli_real_escape_string($conn, $county);
 		$tel = mysqli_real_escape_string($conn, $tel);
@@ -44,8 +41,8 @@
 			}
 			
 			if (mysqli_num_rows($valid) == 0 ) {
-				$sql = "INSERT INTO customers (surname, forename, town, county, tel, type)
-				VALUES ('$surname', '$forename', '$town', '$county', '$tel', '$type');";
+				$sql = "INSERT INTO customers (name, town, county, tel, type)
+				VALUES ('$name', '$town', '$county', '$tel', '$type');";
 				$res = mysqli_query($conn, $sql);
 				
 				if (!$res) {

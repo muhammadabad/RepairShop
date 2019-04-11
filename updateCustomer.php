@@ -156,8 +156,7 @@
 					</span>
 					<form class="form-4" action="" method="post">
 						Customer ID: <input type="text" name="ud_id" value="<?php echo $id; ?>" readonly>
-						First Name: <input type="text" name="ud_forename" value="<?php echo $forename; ?>"><br />
-						Last Name: <input type="text" name="ud_surname" value="<?php echo $surname; ?>"><br />
+						Name: <input type="text" name="ud_name" value="<?php echo $name; ?>"><br />
 						Town: <input type="text" name="ud_town" value="<?php echo $town; ?>"><br />
 						County: <input type="text" name="ud_county" value="<?php echo $county; ?>"><br />
 						Telephone: <input type="text" name="ud_tel" value="<?php echo $tel; ?>"><br />

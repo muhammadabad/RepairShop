@@ -17,7 +17,7 @@
 		
 		$res = mysqli_query($conn, $sql);
 		if ( !$res ) {
-			echo('Query failed ' . $sql . ' Error:' . mysqli_error($dbcnx));
+			echo('Query failed ' . $sql . ' Error:' . mysqli_error($sql));
 			exit();
 		}
 		
@@ -25,8 +25,7 @@
 		{
 			$row = mysqli_fetch_array($res); 
 			$id = $row['cust_id'];
-			$surname = $row['surname'];
-			$forename = $row['forename'];
+			$name = $row['name'];
 			$town = $row['town'];
 			$county = $row['county'];
 			$tel = $row['tel'];

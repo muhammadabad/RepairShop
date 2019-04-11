@@ -15,22 +15,18 @@
 		
 		
 		$id = $_POST['ud_id'];
-		$description = $_POST['ud_description'];
 		$device = $_POST['ud_device'];
 		$brand = $_POST['ud_brand'];
 		$model = $_POST['ud_model'];
-		
 		$work_done = $_POST['ud_work_done'];
-		
 		$amount = $_POST['ud_amount'];
 		$profit = $_POST['ud_profit'];
-		$date = $_POST['ud_date'];
 		$status = $_POST['ud_status'];
 		$pay_date = $_POST['ud_pay_date'];
 		$pay_status = $_POST['ud_pay_status'];
 		$comment = $_POST['ud_comment'];
 		
-		$sql = "UPDATE repairs SET description = '$description',  devicetype = '$device', brand = '$brand', model = '$model', status = '$status', workdone= '$work_done', amount = '$amount', profit = '$profit', date = '$date', paymentreceiveddate = '$pay_date', paymentstatus = '$pay_status', comment = '$comment' WHERE rep_id = $id" ;
+		$sql = "UPDATE repairs SET devicetype = '$device', brand = '$brand', model = '$model', status = '$status', workdone= '$work_done', amount = '$amount', profit = '$profit', paymentreceiveddate = '$pay_date', paymentstatus = '$pay_status', comment = '$comment' WHERE rep_id = $id" ;
 		
 		$res = mysqli_query($conn, $sql);	
 		if ( !$res ) {
@@ -67,19 +63,17 @@
 				{
 					$row = mysqli_fetch_array($res); 
 					$cust_id = $row['Cust_ID'];
+					$name = $row['Cust_Name'];
 					$staff_id = $row['Staff_ID'];
 					$device = $row['DeviceType'];
 					$brand = $row['Brand'];
 					$model = $row['Model'];
 					$work_done = $row['WorkDone'];
-			        
 			        $amount = $row['Amount'];
 			        $profit = $row['Profit'];
-		        	$date = $row['Date'];
 					$pay_date = $row['PaymentReceivedDate'];
 					$pay_status = $row['PaymentStatus'];
 			        $comment = $row['Comment'];
-					$description = $row['Description'];
 				}
 			}
 			//free results

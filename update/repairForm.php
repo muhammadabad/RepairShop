@@ -25,19 +25,18 @@
 		{
 			$row = mysqli_fetch_array($res); 
 			$cust_id = $row['Cust_ID'];
+			$name = $row['Cust_Name'];
 			$staff_id = $row['Staff_ID'];
 			$device = $row['DeviceType'];
 			$brand = $row['Brand'];
 			$model = $row['Model'];
 			$work_done = $row['WorkDone'];
-			
 			$amount = $row['Amount'];
 			$profit = $row['Profit'];
-			$date = $row['Date'];
 			$pay_date = $row['PaymentReceivedDate'];
 			$pay_status = $row['PaymentStatus'];
 			$comment = $row['Comment'];
-			$description = $row['Description'];
+			
 		}
 		
 

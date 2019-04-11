@@ -30,6 +30,7 @@
 					<form class="form-4" action="" method="post">
 						<input type="hidden" name="ud_id" value="<?php echo $id; ?>" readonly>
 						Customer_ID: <input type="text" name="ud_cust_id" value="<?php echo $cust_id; ?>" readonly>
+						Name: <input type="text" name="ud_name" value="<?php echo $name; ?>" readonly>
 						<input type="hidden" name="ud_staff_id" value="<?php echo $staff_id; ?>" readonly>
 						Device Type: <select id="" name="ud_device" class="" required="">
 							<option value="Laptop" <?php if($row['DeviceType'] == 'Laptop') { ?> selected="selected"<?php } ?>>Laptop</option> 
@@ -39,12 +40,10 @@
 						</select>
 						Brand: <input type="text" name="ud_brand" value="<?php echo $brand; ?>" required>
 						Model: <input type="text" name="ud_model" value="<?php echo $model; ?>" required>
-						
 						Work Done: <input type="text" name="ud_work_done" value="<?php echo $work_done;?>" required>
-						
 						Amount: <input type="Number" name="ud_amount" value="<?php echo $amount;?>">
 						Profit: <input type="Number" name="ud_profit" value="<?php echo $profit;?>">
-						Date: <input type="date" name="ud_date" value="<?php echo $date;?>" required><br>
+						
 						Status: <select id="" name="ud_status" class="" required="">
 							<option value="New" <?php if($row['Status'] == 'New') { ?> selected="selected"<?php } ?>>New</option> 
 							<option value="In Progress" <?php if($row['Status'] == 'In Progress') { ?> selected="selected"<?php } ?>>In Progress</option>
@@ -62,7 +61,6 @@
 							<option value="Paid" <?php if($row['PaymentStatus'] == 'Paid') { ?> selected="selected"<?php } ?>>Paid</option>
 						</select>
 						Comment: <input type="text" name="ud_comment" value="<?php echo $comment;?>">
-						Description: <textarea rows="5" name="ud_description"><?php echo $description; ?></textarea>
 						<input type="submit" name="submit" value="Update Repair Details">
 						
 					</form>

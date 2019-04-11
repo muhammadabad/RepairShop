@@ -49,8 +49,7 @@
 								<table class="table table-striped table-bordered">
 									<thead>
 										<th>ID&nbsp;<a ng-click="sort_by('cust_id');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Surname&nbsp;<a ng-click="sort_by('surname');"><i class="glyphicon glyphicon-sort"></i></a></th>
-										<th>Forename&nbsp;<a ng-click="sort_by('forename');"><i class="glyphicon glyphicon-sort"></i></a></th>
+										<th>Name&nbsp;<a ng-click="sort_by('name');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Town&nbsp;<a ng-click="sort_by('town');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>County&nbsp;<a ng-click="sort_by('county');"><i class="glyphicon glyphicon-sort"></i></a></th>
 										<th>Telephone&nbsp;<a ng-click="sort_by('tel');"><i class="glyphicon glyphicon-sort"></i></a></th>
@@ -59,8 +58,7 @@
 									<tbody>
 										<tr ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 											<td>{{data.cust_id}}</td>
-											<td>{{data.surname}}</td>
-											<td>{{data.forename}}</td>
+											<td>{{data.name}}</td>
 											<td>{{data.town}}</td>
 											<td>{{data.county}}</td>
 											<td>{{data.tel}}</td>

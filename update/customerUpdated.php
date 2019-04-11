@@ -16,14 +16,13 @@
 		
 		
 		$ud_id=$_POST['ud_id'];
-		$ud_name=$_POST['ud_surname'];
-		$ud_forename=$_POST['ud_forename'];
+		$ud_name=$_POST['ud_name'];
 		$ud_town=$_POST['ud_town'];
 		$ud_county=$_POST['ud_county'];
 		$ud_tel = $_POST['ud_tel'];
 		$ud_type = $_POST['ud_type'];
 		
-		$sql = "UPDATE customers SET surname ='$ud_name', forename ='$ud_forename', town = '$ud_town', county = '$ud_county', tel = '$ud_tel', type = '$ud_type' WHERE cust_id=$ud_id";
+		$sql = "UPDATE customers SET name = '$ud_name', town = '$ud_town', county = '$ud_county', tel = '$ud_tel', type = '$ud_type' WHERE cust_id=$ud_id";
 		
 		$res = mysqli_query($conn, $sql);	
 		if ( !$res ) {
@@ -62,8 +61,7 @@
 			{
 				$row = mysqli_fetch_array($res); 
 				$id = $ud_id;
-				$surname = $row['surname'];
-				$forename = $row['forename'];
+				$name = $row['name'];
 				$town = $row['town'];
 				$county = $row['county'];
 				$tel = $row['tel'];
