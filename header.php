@@ -14,7 +14,7 @@
 		
 		<link rel="stylesheet" href="css/menu.css" />
 		<script src="js/modernizr.custom.js"></script>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/bootstrap.min.css"> 
 		<style type="text/css">
 			ul>li, a{cursor: pointer;}
 		</style>

@@ -2,7 +2,7 @@
 include 'dbconnect.php';
     $success = ' ';
 	$notFound =  ' ';
-	if (isset($_POST['submit'])) {
+	if (isset($_POST['cust_id'])) {
 		
 		// Define $username and $password
 		$cust_id = $_POST['cust_id'];
@@ -63,23 +63,23 @@ include 'dbconnect.php';
 			$sql = "INSERT INTO repairs (cust_id, cust_name, staff_id, devicetype, brand, model, workdone, amount, profit, comment, status)
 			VALUES ('$cust_id', '$name', '$staff_id', '$device', '$brand', '$model', '$work_done', '$amount', '$profit', '$comment', '$status')";
 			$res = mysqli_query($conn, $sql);
-			
-			if (!$res) {
-				$notFound = "Error adding...<br><br>";
-			}
-			if (mysqli_affected_rows($conn) == 1) {
-                $success =  "Repair added successfully. Redirecting.....<br><br>";
-				$id = $cust_id;
-				header("refresh:3; url=repairs.php");
+			echo json_encode($res);
+			// if (!$res) {
+			// 	$notFound = "Error adding...<br><br>";
+			// }
+			// if (mysqli_affected_rows($conn) == 1) {
+            //     $success =  "Repair added successfully. Redirecting.....<br><br>";
+			// 	$id = $cust_id;
+			// 	header("refresh:3; url=repairs.php");
 
-				} else {
-				$notFound =  "Could not add due to system error!<br><br>";
-			}
+			// 	} else {
+			// 	$notFound =  "Could not add due to system error!<br><br>";
+			// }
 			
 			} else {
 			$id = $cust_id;
 			$notFound = "Customer wasn't found in the system. Please go back and enter a valid customer ID <br><br>";
 		}
-		mysqli_close($conn);
+		// mysqli_close($conn);
 	}
 ?>

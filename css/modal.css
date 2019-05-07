@@ -1,0 +1,116 @@
+/* 
+.modal-dialog .modal-content{
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    border-radius: 6px;
+    border: none;
+}
+.modal-dialog .modal-header{
+    border-bottom: none;
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 0;
+    padding-left: 24px;
+}
+
+.modal-dialog .modal-header .modal-title{
+    font-size: 17px;
+    font-weight: 300;
+    color: #3C4858;
+    margin-bottom: 0;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.modal-dialog .modal-body {
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    color: #3C4858;
+}
+
+.modal .modal-header .close i{
+    font-size: 16px;
+    color: #999;
+}
+
+.modal-dialog .modal-footer{
+    border-top: none;
+    padding: 24px !important;
+}
+
+.modal-dialog .modal-body+.modal-footer{
+    padding-top: 0 !important;
+}
+.modal-dialog .modal-footer button{
+    margin: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: auto;
+}
+
+
+.modal-login {
+    max-width: 360px !important;
+    margin-top:130px;
+}
+
+.modal-dialog .modal-content .card-signup .modal-header {
+    padding-top: 0;
+}
+
+.modal-login .modal-header .card-header{
+    width: 100%;
+}
+
+.modal-login .modal-header .close {
+    color: #fff;
+    top: -25px;
+    right: 50px;
+    text-shadow: none;
+    position: absolute;
+}
+
+.modal-login .modal-header .close i{
+    color: #fff;
+   
+}
+
+
+.modal-login .modal-body {
+    padding-left: 4px !important;
+}
+
+.modal-login .modal-footer {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+.modal-login .modal-header .card-header .social-line {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 0;
+}
+
+
+.modal-login .modal-body {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+
+
+
+
+
+.modal-dialog .modal-body {
+    padding: 24px 24px 16px;
+}
+
+.modal-dialog .modal-footer button {
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: auto;
+}
+
+ */
